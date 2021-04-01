@@ -20,10 +20,8 @@
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-
-                <p>
-                    Don Pedro Supertienda <i class="bi bi-handbag"></i>
-                </p>
+            <i class="bi bi-bag-fill"> </i> SuperMarket Pedro           
+                
             </div>
             <ul class="list-unstyled components">
 
@@ -42,20 +40,21 @@
                     </ul>
                 </li> -->
                 <li>
-                    <a href="#">Inicio</a>
+                    <a href="#"><i class="bi bi-house"></i> Inicio</a>
                 </li>
 
                 <li>
-                    <a href="<?php echo RUTA_URL . 'Cliente' ?>">Cliente</a>
+               
+                    <a href="<?php echo RUTA_URL . 'Cliente' ?>"> <i class="bi bi-file-person"> </i>Cliente</a>
                 </li>
                 <li>
-                    <a href="<?php echo RUTA_URL . 'Articulo' ?>">Articulo</a>
+                    <a href="<?php echo RUTA_URL . 'Articulo' ?>"><i class="bi bi-box"></i> Articulo</a>
                 </li>
                 <li>
-                    <a href="<?php echo RUTA_URL . 'Pedido' ?>">Pedido</a>
+                    <a href="<?php echo RUTA_URL . 'Pedido' ?>"><i class="bi bi-receipt-cutoff"></i> Pedido</a>
                 </li>
                 <li>
-                    <a href="#reportes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reportes</a>
+                    <a href="#reportes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-printer"></i> Reportes</a>
                     <ul class="collapse list-unstyled" id="reportes">
 
                         <li>
@@ -68,7 +67,7 @@
                 </li>
 
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Exportar</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-arrow-down-circle-fill"></i> Exportar</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
 
                         <li>
