@@ -2,7 +2,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 body {
   font-family: 'Poppins', sans-serif; 
-  background: #d8d8d8;
+  background: #ecf0f5;
   font-size: 11px; 
 }
 
@@ -60,7 +60,7 @@ a:focus {
 
 #sidebar .sidebar-header {
   padding: 15px;
-  background: #234af7;
+  background: #3c8dbc;
   color: #fff;
 }
 
@@ -165,7 +165,7 @@ hr.estilo1 {
 footer {
   padding: 10px;
   border-radius: 5px;
-  background-color: #cfcdcd;
+  background-color: #f7f7f7;
   color:#0c0c0c;
   text-align: center;
  
