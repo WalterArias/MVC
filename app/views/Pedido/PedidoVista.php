@@ -10,23 +10,24 @@
             <div class="card-body">
                 <form class="formpedido" method="POST">
                     <div class="row">
-                        <div class="col-sm-5"><label for="Consecutivo">Pedido No.: XYZ</label></div>
                         <div class="col-sm-2><label for=" Fecha">Fecha</label></div>
-                        <div class="col-sm-3"> <input id="fecha" class="form-control form-control-sm" type="date" name="fecha" placeholder="Fecha Pedido">
+                        <div class="col-sm-3"> <input id="fecha" class="form-control form-control-sm" type="date" name="fecha" placeholder="Fecha Pedido" required>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm2">
                             <div class="input-group">
-                                <input type="text" class="form-control  form-control-sm" placeholder="Cliente">
+                                <input type="text" class="form-control  form-control-sm" placeholder="Cliente" name ="idcliente" id="idcliente" readonly>
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#frmClientes">
                                         <i class="bi bi-search"></i></button>
                                 </span>
                             </div>
                         </div>
-                        <div class="col-sm-4"> <input id="nombre" class="form-control form-control-sm" type="text" name="nombre" placeholder="nombre">
+                        <div class="col-sm-2"> <input id="nombre" class="form-control form-control-sm" type="text" name="nombre" placeholder="nombre">
+                        </div>
+                        <div class="col-sm-2"> <input id="apellido" class="form-control form-control-sm" type="text" name="apellido" placeholder="apellido">
                         </div>
                         <div class="col-sm-4"><input id="direccion" class="form-control form-control-sm" type="text" name="direccion" placeholder="direccion">
                         </div>
@@ -66,7 +67,7 @@
                        <!--  <button class="btn btn-sm btn-secondary" type="button" id="cancelar">
                             <i class="bi bi-x-square"></i></button> -->
                             <input class="btn btn-sm btn-success" type="reset" value="reset">
-                        <input id="guardar" class="btn btn-sm btn-success" type="submit" value="Guardar">
+                        <input class="btn btn-sm btn-success"  type="submit"  id = "guardarPedido" value="Guardar">
                 </form>
             </div> <!-- fin del card -->
         </div>
@@ -74,7 +75,7 @@
 </div>
 <!--modales -->
 <!-- Modal de los clientes -->
-<div class="modal fade" id="frmClientes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal" id="frmClientes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

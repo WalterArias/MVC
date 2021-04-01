@@ -11,22 +11,22 @@ class PedidoModelo
 
     public function crearPedido($datos)
     {
-        $this->db->query('INSERT INTO cliente (clientenombre, clienteapellidos, direccion,email,fechaingreso,deuda,estado) VALUES (:nombre,  :apellido, :direccion,
-         :email, :fecha, :deuda, :estado);');
-        
+        //insercion tabla maestra
+        $this->db->query('INSERT INTO pedido_cabecera (fecha,cliente_idcliente) VALUES (:fecha, :idcliente);');
         // Vinculamos los valores que llegan del formulario con la consulta sql
-        $this->db->bind(':nombre', $datos['nombre']);
-        $this->db->bind(':apellido', $datos['apellido']);
-        $this->db->bind(':direccion', $datos['direccion']);
-        $this->db->bind(':email', $datos['email']);
+        $this->db->bind(':idcliente', $datos['idcliente']);
         $this->db->bind(':fecha', $datos['fecha']);
-        $this->db->bind(':deuda', $datos['deuda']);
-        $this->db->bind(':estado', $datos['estado']);
-        // Ejecutamos la consulta
-        if ($this->db->execute()) {
-            return 'Inserción exitosa';
-        } else {
-            return 'Error en la inserción';
+        $this->db->execute();
+        // insercion del detalle
+        $numpedido = $this->db->ultimaInsercion(); //para encontrar el id de la tabla maestra
+        $num_elementos = 0; //para recorrer el arreglo
+        // insercion tabla de detalle
+        while ($num_elementos < count($datos['idarticulo'])) {
+            $this->db->query("INSERT INTO pedido_detalle(idarticulo,cantidad,pedido_num) VALUES (:idarticulo,:cantidad,$numpedido)");
+            $this->db->bind(':idarticulo', $datos['idarticulo'][$num_elementos]);
+            $this->db->bind(':cantidad', $datos['cantidad'][$num_elementos]);
+            $this->db->execute();
+            $num_elementos = $num_elementos + 1;
         }
     }
 }

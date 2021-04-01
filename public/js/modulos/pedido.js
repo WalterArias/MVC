@@ -1,5 +1,5 @@
-var listarClientes = function () {
-  var tabla1 = $("#tablaClientes").DataTable({
+const listarClientes = function () {  
+  var clientes = $("#tablaClientes").DataTable({
     ajax: {
       url: "http://localhost/mvc/Cliente/" + "listarClientes",
       dataSrc: "",
@@ -38,13 +38,14 @@ var listarClientes = function () {
       },
     ],
   });
-  agregarCliente("#tablaClientes tbody", tabla1);
+ 
+  agregarCliente("#tablaClientes tbody", clientes);
 };
 
 // logica de la interfaz para cargar los productos en la forma
 
-var listarProductos = function () {
-  var tabla2 = $("#tablaArticulos").DataTable({
+ const listarProductos = function () {
+  let tabla = $("#tablaArticulos").DataTable({
     ajax: {
       url: "http://localhost/mvc/Articulo/" + "listarArticulos",
       dataSrc: "",
@@ -80,10 +81,10 @@ var listarProductos = function () {
     ],
   });
 
-  agregarArticulo("#tablaArticulos tbody", tabla2);
-};
+  agregarArticulo("#tablaArticulos tbody", tabla);
+}; 
 
-var agregarArticulo = function (tbody, table) {
+const agregarArticulo = function (tbody, table) {
   $("#tablaArticulos tbody").on("click", "button", function () {
     let dato = table.row($(this).parents("tr")).data(); //captura el valor de la fila seleccionada en DataTable
     let cantidad = 5;
@@ -152,40 +153,49 @@ const eliminarFila = function (indice) {
   calcularTotalPedido();
 };
 
-const guardar = function () {
-  $("form").on("submit", function (e) {
+
+
+const agregarCliente = function (tbody, table) {
+  $("#tablaClientes tbody").on("click", "button.AgregarCliente", function () {    
+  let dato = table.row($(this).parents('tr')).data(); //captura el valor de la fila seleccionada en DataTable    
+  document.getElementById('idcliente').value = dato.idcliente;
+  document.getElementById('nombre').value = dato.clientenombre;
+  document.getElementById('apellido').value = dato.clienteapellidos;
+  document.getElementById('direccion').value = dato.direccion;
+  $("#frmClientes").modal("hide");   
+});
+};
+
+
+
+const guardarPedido = function () {  
+   $("form").on("submit", function (e) {
     e.preventDefault();
     var datos = new FormData($("form")[0]);   
     $.ajax({
-      url: "http://localhost/mvc/Pedido/" + "crearPedido",,
+      url: "http://localhost/mvc/Pedido/" + "crearPedido",
       method: "POST",
       data: datos,
       processData: false,
       contentType: false,
     })
       .done(function (data) {
-        alert(data);
-  
+        console.log(data);
       })
       .fail(function (data) {
         alert("operacion fallida !");
         
       });
-  });
+  }); 
 };
-
-
-
-
-var agregarCliente = function () {};
 
 $(document).ready(function () {
   agregarArticulo();
   listarClientes();
-  listarProductos();
+   listarProductos(); 
   agregarCliente();
   calcularSubtotalFila();
   calcularTotalPedido();
   eliminarFila();
-  
+  guardarPedido();  
 });

@@ -14,17 +14,19 @@ class Pedido extends Controlador
     public function crearPedido()
     {             
             $datos = [
-                'nombre' => $_POST['nombre'],
-                'apellido' => $_POST['apellido'],
-                'direccion' => $_POST['direccion'],
-                'email' => $_POST['email'],
-                'estado' => $_POST['estado'],
+                'idcliente' => $_POST['idcliente'],                 
                 'fecha' => $_POST['fecha'],
-                'deuda' => $_POST['deuda']
-        ];
-            $datos = $this->pedidomodelo->crearPedido($datos);
-            echo json_encode($datos);
+                'idarticulo' =>$_POST['idArticulo'],
+                'cantidad' =>$_POST['cantidad'],
+                'subtotal' =>$_POST['subtotal']                                
+        ];    
         
+        echo '<pre>';
+        print_r($datos);
+        echo '</pre>';
+
+            $datos = $this->pedidomodelo->crearPedido($datos);
+            echo json_encode($datos);        
         }
     }
     

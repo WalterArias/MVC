@@ -33,7 +33,7 @@
 		public function query($sql) {
 			$this->stmt = $this->dbh->prepare($sql);
 		}
-
+	
 		// Vincula la consulta a BIND
 		public function bind($parametro, $valor, $tipo = null) {
 			if (is_null($tipo)) {
@@ -73,8 +73,12 @@
 		}
 
 		// Obtiene el total de filas que coinciden
-		public function rowCount() {
+		public function totalFilas() {
 			return $this->stmt->rowCount();
+		}
+
+		public function ultimaInsercion() {
+			return $this->dbh->lastInsertId(); 			
 		}
 		
 	}
