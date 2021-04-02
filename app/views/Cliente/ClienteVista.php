@@ -1,4 +1,4 @@
-<?php require RUTA_APP . '/views/inc/header.php'; ?>
+<?php require RUTA_APP . '/views/inc/header.php';?>
 
 
 <div class="row">
@@ -12,7 +12,7 @@
         <div class="card-body">
             <table id="mitabla" class="table  table-striped table-bordered table-sm">
                 <thead>
-                    <tr>                       
+                    <tr>
                         <th > id</th>
                         <th >Nombre</th>
                         <th >Apellido</th>
@@ -63,6 +63,10 @@
                         <input id="fecha" class="form-control form-control-sm" type="date" name="fecha">
                         <label for="deuda">Deuda</label>
                         <input id="deuda" class="form-control form-control-sm" type="text" name="deuda">
+                            <label for="imagen">Imagen:</label>
+                            <input type="file" class="form-control form-control-sm" name="imagen" id="imagen">
+                            <input type="hidden" name="imagenactual" id="imagenactual">
+                            <img src="" width="150px" height="120px" id="imagenmuestra">
 
 
                     </div>
@@ -71,9 +75,9 @@
                     <button class="btn btn-sm btn-secondary" type="button" id="imprimir" data-toggle='tooltip' data-placement='top' title='Imprime'> <i class="bi bi-printer"></i></button>
                     <button class="btn btn-sm btn-secondary" type="button" id="cancelar" data-toggle='tooltip' data-placement='top' title='Cancela Operacion'><i class="bi bi-x-square"></i></button>
                     <input id="guardar" class="btn btn-sm btn-success" type="submit" value="Guardar">
-                    
+
             </form>
-        
+
         </div>
 
     </div>
@@ -96,4 +100,4 @@
 <script src="<?php echo RUTA_URL; ?>public/js/modulos/Cliente.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/datatables.min.js"></script>
 
-<?php require RUTA_APP . '/views/inc/footer.php'; ?>
+<?php require RUTA_APP . '/views/inc/footer.php';?>

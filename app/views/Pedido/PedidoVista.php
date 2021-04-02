@@ -71,7 +71,7 @@
                 </form>
             </div> <!-- fin del card -->
         </div>
-    </div>s
+    </div>
 </div>
 <!--modales -->
 <!-- Modal de los clientes -->
