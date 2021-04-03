@@ -14,7 +14,7 @@
                                 <label for=""></label>
                                 <input type="text" name="" id="" class="form-control" placeholder="Nombre"
                                     aria-describedby="helpId">
-                                
+
                             </div>
 
                         </div>
@@ -23,7 +23,7 @@
                                 <label for=""></label>
                                 <input type="text" name="" id="" class="form-control" placeholder="Apellido"
                                     aria-describedby="helpId">
-                                
+
                             </div>
 
                         </div>
@@ -32,7 +32,7 @@
                                 <label for=""></label>
                                 <input type="text" name="" id="" class="form-control" placeholder="Email"
                                     aria-describedby="helpId">
-                                
+
                             </div>
 
                         </div>
@@ -41,7 +41,7 @@
                                 <label for=""></label>
                                 <input type="text" name="" id="" class="form-control" placeholder="Telefono"
                                     aria-describedby="helpId">
-                                
+
                             </div>
 
                         </div>
@@ -50,7 +50,7 @@
                                 <label for=""></label>
                                 <input type="text" name="" id="" class="form-control" placeholder="Login"
                                     aria-describedby="helpId">
-                                
+
                             </div>
 
                         </div>
@@ -59,7 +59,7 @@
                                 <label for=""></label>
                                 <input type="text" name="" id="" class="form-control" placeholder="Password"
                                     aria-describedby="helpId">
-                                
+
                             </div>
 
                         </div>
@@ -67,16 +67,17 @@
 
 
 
-               
+
 
 
 
             </div>
             <div class="card-footer">
-    <button type="button" class="btn btn-secondary"><i class="bi bi-file-earmark-plus"></i> Nuevo</button>
-    <button type="button" class="btn btn-secondary"><i class="bi bi-x"></i> Cancelar</button>
-    <button type="button" class="btn btn-primary"><i class="bi bi-save-fill"></i> Guardar</button>
-              
+                <button type="button" class="btn btn-secondary" i><i class="bi bi-file-earmark-plus"></i> Nuevo</button>
+                <button type="button" class="btn btn-secondary"><i class="bi bi-x"></i> Cancelar</button>
+                <button type="button" id="guardar" class="btn btn-primary"><i class="bi bi-save-fill"></i>
+                    Guardar</button>
+
             </div>
             </form>
 
