@@ -3,7 +3,8 @@
     <div class="col-md-12">
         <div class="card" id="vistatabla">
             <div class="card-header">
-                <b>Pedido</b> <!-- <button type="button" id="nuevo" class="btn btn-sm btn-success" data-toggle='tooltip' title=' Agregar un Pedido'> <i class="bi bi-file-plus"></i> </button> -->
+                <b>Pedido</b>
+                <!-- <button type="button" id="nuevo" class="btn btn-sm btn-success" data-toggle='tooltip' title=' Agregar un Pedido'> <i class="bi bi-file-plus"></i> </button> -->
             </div>
         </div> <!-- tabla inicial con los pedidos -->
         <div class="card" id="formulario">
@@ -11,52 +12,59 @@
                 <form class="formpedido" method="POST">
                     <div class="row">
                         <div class="col-sm-2><label for=" Fecha">Fecha</label></div>
-                        <div class="col-sm-3"> <input id="fecha" class="form-control form-control-sm" type="date" name="fecha" placeholder="Fecha Pedido" required>
+                        <div class="col-sm-3"> <input id="fecha" class="form-control form-control-sm" type="date"
+                                name="fecha" placeholder="Fecha Pedido" required>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm2">
                             <div class="input-group">
-                                <input type="text" class="form-control  form-control-sm" placeholder="Cliente" name ="idcliente" id="idcliente" readonly>
+                                <input type="text" class="form-control  form-control-sm" placeholder="Cliente"
+                                    name="idcliente" id="idcliente" readonly>
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#frmClientes">
+                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                        data-target="#frmClientes">
                                         <i class="bi bi-search"></i></button>
                                 </span>
                             </div>
                         </div>
-                        <div class="col-sm-2"> <input id="nombre" class="form-control form-control-sm" type="text" name="nombre" placeholder="nombre">
+                        <div class="col-sm-2"> <input id="nombre" class="form-control form-control-sm" type="text"
+                                name="nombre" placeholder="nombre">
                         </div>
-                        <div class="col-sm-2"> <input id="apellido" class="form-control form-control-sm" type="text" name="apellido" placeholder="apellido">
+                        <div class="col-sm-2"> <input id="apellido" class="form-control form-control-sm" type="text"
+                                name="apellido" placeholder="apellido">
                         </div>
-                        <div class="col-sm-4"><input id="direccion" class="form-control form-control-sm" type="text" name="direccion" placeholder="direccion">
+                        <div class="col-sm-4"><input id="direccion" class="form-control form-control-sm" type="text"
+                                name="direccion" placeholder="direccion">
                         </div>
                     </div>
                     <hr class="estilo1">
                     <div class="row">
                         <div class="col-md-10">
-                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#frmArticulos"> + Articulo
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#frmArticulos"> + Articulo
                                 <i class="bi bi-table"></i></button>
                             <table class="table table-sm" id="detalle">
                                 <thead>
                                     <tr>
-                                        <th>id</th>                                       
+                                        <th>id</th>
                                         <th>Descripcion</th>
-                                        <th >Cantidad</th>
+                                        <th>Cantidad</th>
                                         <th>Vr. Unitario</th>
                                         <th>SubTotal</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
-                                <th>id</th>                                       
-                                        <th>Descripcion</th>
-                                        <th>Cantidad</th>
-                                        <th>Vr. Unitario</th>
-                                        <th class ="p-3 mb-2 bg-info text-white"><span id ="granTotal">TOTAL</span></th>
+                                    <th>id</th>
+                                    <th>Descripcion</th>
+                                    <th>Cantidad</th>
+                                    <th>Vr. Unitario</th>
+                                    <th class="p-3 mb-2 bg-info text-white"><span id="granTotal">TOTAL</span></th>
                                 </tfoot>
-                               
-                            
-                               
+
+
+
                             </table>
                         </div>
                     </div>
@@ -64,10 +72,10 @@
                         <!--  botonera -->
                         <button class="btn btn-sm btn-secondary" type="button" id="imprimir">
                             <i class="bi bi-printer"></i></button>
-                       <!--  <button class="btn btn-sm btn-secondary" type="button" id="cancelar">
+                        <!--  <button class="btn btn-sm btn-secondary" type="button" id="cancelar">
                             <i class="bi bi-x-square"></i></button> -->
-                            <input class="btn btn-sm btn-success" type="reset" value="reset">
-                        <input class="btn btn-sm btn-success"  type="submit"  id = "guardarPedido" value="Guardar">
+                        <input class="btn btn-sm btn-success" type="reset" value="reset">
+                        <input class="btn btn-sm btn-success" type="submit" id="guardarPedido" value="Guardar">
                 </form>
             </div> <!-- fin del card -->
         </div>
@@ -96,7 +104,7 @@
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
@@ -131,9 +139,13 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+</script>
 <script src="<?php echo RUTA_URL; ?>public/js/menu.js"></script>
 <script src="<?php echo RUTA_URL; ?>public/js/modulos/pedido.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/datatables.min.js"></script>
+<script type="text/javascript"
+    src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/datatables.min.js"></script>
 <?php require RUTA_APP . '/views/inc/footer.php'; ?>

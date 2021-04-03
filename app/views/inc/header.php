@@ -54,6 +54,9 @@
                     <a href="<?php echo RUTA_URL . 'Pedido' ?>"><i class="bi bi-receipt-cutoff"></i> Pedido</a>
                 </li>
                 <li>
+                    <a href="<?php echo RUTA_URL . 'Usuario' ?>"><i class="bi bi-key"></i> Usuario</a>
+                </li>
+                <li>
                     <a href="#reportes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-printer"></i> Reportes</a>
                     <ul class="collapse list-unstyled" id="reportes">
 

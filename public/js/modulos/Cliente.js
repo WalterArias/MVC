@@ -75,6 +75,8 @@ var editar = function (tbody, table) {
     var idcliente = $("#id").val(dato.idcliente);
     var nombre = $("#nombre").val(dato.clientenombre);
     var apellido = $("#apellido").val(dato.clienteapellidos);
+    $("#imagenmuestra").attr("src","public/img/img_"+dato.imagen);
+    //var imagenmuestra = $("#imagenmuestra").src=
   });
 };
 

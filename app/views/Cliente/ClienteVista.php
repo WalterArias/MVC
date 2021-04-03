@@ -50,6 +50,13 @@
 
                     </div>
                     <div class="col-md-5">
+                   
+                    <img src="" width="90px" height="100px" id="imagenmuestra">
+                    <br>
+                    <label for="imagen">Imagen:</label>
+                            <input type="file" class="form-control form-control-sm" name="imagen" id="imagen">
+                            <input type="hidden" name="imagenactual" id="imagenactual">
+
                         <label class="form-check-label">
                             <label>Estado del cliente</label>
                             <select class="form-control form-control-sm" id="estado" name="estado">
@@ -63,10 +70,7 @@
                         <input id="fecha" class="form-control form-control-sm" type="date" name="fecha">
                         <label for="deuda">Deuda</label>
                         <input id="deuda" class="form-control form-control-sm" type="text" name="deuda">
-                            <label for="imagen">Imagen:</label>
-                            <input type="file" class="form-control form-control-sm" name="imagen" id="imagen">
-                            <input type="hidden" name="imagenactual" id="imagenactual">
-                            <img src="" width="150px" height="120px" id="imagenmuestra">
+
 
 
                     </div>

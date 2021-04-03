@@ -1,6 +1,6 @@
 <?php
 
-class ClienteModelo
+class UsuarioModelo
 {
     private $db;
 
@@ -9,12 +9,12 @@ class ClienteModelo
         $this->db = new Base;
     }
 
-    public function obtenerClientes(){
-        $this->db->query('SELECT * from Cliente');
+    public function obtenerUsuarios(){
+        $this->db->query('SELECT * from Usuario');
         $resultados = $this->db->registros();
         return $resultados;
     }  
-
+/* 
     public function contarClientes()
     {
         $this->db->query('SELECT count(*) from Cliente');
@@ -27,9 +27,9 @@ class ClienteModelo
         $this->db->query('SELECT * from Cliente where idcliente = 10');
         $resultados = $this->db->registros();
         return $resultados;
-    }
+    } */
     
-  public function actualizarCliente($datos){
+  /* public function actualizarCliente($datos){
     $this->db->query('UPDATE cliente SET clientenombre = :nombre, clienteapellidos = :apellido,
     direccion = :direccion, email = :email, fechaingreso= :fecha, Deuda = :deuda, imagen =:imagen, estado = :estado 
     WHERE idcliente = :id');
@@ -84,7 +84,7 @@ class ClienteModelo
         } else {
             return false;
         }
-    }
+    } */
 
   }
 
