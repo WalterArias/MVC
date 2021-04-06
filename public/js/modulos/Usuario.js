@@ -1,4 +1,5 @@
 const RUTA_URL ='http://localhost/mvc/Usuario/';
+
 let guardar = function () {
     $("form").on("submit", function (e) {      
       e.preventDefault();

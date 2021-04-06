@@ -16,48 +16,22 @@ Class Usuario extends Controlador
          echo json_encode($datos);       
 
     }
-/* 
-    public function crearCliente()
-    {
-        $id=$_POST['id'];
-        
-        if (empty($id)) {
+ 
+    public function crearUsuario(){       
             $datos = [
-                'nombre' => $_POST['nombre'],
-                'apellido' => $_POST['apellido'],
-                'direccion' => $_POST['direccion'],
-                'email' => $_POST['email'],
-                'estado' => $_POST['estado'],
-                'fecha' => $_POST['fecha'],
-                'deuda' => $_POST['deuda']
+                'nombre' =>$_POST['nombre'],
+                'apellido' =>$_POST['apellido'],
+                'email' =>$_POST['email'],
+                'telefono' =>$_POST['telefono'],
+                'login' =>$_POST['login'],
+                'password' =>password_hash($_POST['password'], PASSWORD_DEFAULT)               
         ];
-            $datos = $this->clientemodelo->crearCliente($datos);
-            echo json_encode($datos);
-        } else {
-            $datos = [
-                'id' => $_POST['id'],
-                'nombre' => $_POST['nombre'],
-                'apellido' => $_POST['apellido'],
-                'direccion' => $_POST['direccion'],
-                'email' => $_POST['email'],
-                'estado' => $_POST['estado'],
-                'fecha' => $_POST['fecha'],
-                'deuda' => $_POST['deuda']
-                    
-        ];
-            $datos = $this->clientemodelo->actualizarCliente($datos);
-            echo json_encode($datos);
-        }
-    }
-    public function eliminarCliente()
-    {
-        $datos =[
-            'id_cliente' => $_POST['id']
-        ];
-
-        $datos = $this->clientemodelo->eliminarCliente($datos);
+            $datos = $this->usuariomodelo->crearUsuario($datos);
+          
         echo json_encode($datos);
-    } */
-
+       
+        }
+    
+   
 
 }

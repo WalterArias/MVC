@@ -7,12 +7,12 @@
             <div class="card-body">
                 <div class="card-title"><b>Usuario</b></div>
                 <!--    CUERPO -->
-                <form action="">
+                <form class="formeditar" method="POST">
                     <div class="class row">
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for=""></label>
-                                <input type="text" name="" id="" class="form-control" placeholder="Nombre"
+                                <input type="text" name="nombre" id="" class="form-control" placeholder="Nombre"
                                     aria-describedby="helpId">
 
                             </div>
@@ -21,7 +21,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for=""></label>
-                                <input type="text" name="" id="" class="form-control" placeholder="Apellido"
+                                <input type="text" name="apellido" id="" class="form-control" placeholder="Apellido"
                                     aria-describedby="helpId">
 
                             </div>
@@ -30,7 +30,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for=""></label>
-                                <input type="text" name="" id="" class="form-control" placeholder="Email"
+                                <input type="text" name="email" id="" class="form-control" placeholder="Email"
                                     aria-describedby="helpId">
 
                             </div>
@@ -39,7 +39,7 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label for=""></label>
-                                <input type="text" name="" id="" class="form-control" placeholder="Telefono"
+                                <input type="text" name="telefono" id="" class="form-control" placeholder="Telefono"
                                     aria-describedby="helpId">
 
                             </div>
@@ -48,7 +48,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for=""></label>
-                                <input type="text" name="" id="" class="form-control" placeholder="Login"
+                                <input type="text" name="login" id="" class="form-control" placeholder="Login"
                                     aria-describedby="helpId">
 
                             </div>
@@ -57,7 +57,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for=""></label>
-                                <input type="text" name="" id="" class="form-control" placeholder="Password"
+                                <input type="text" name="password" id="" class="form-control" placeholder="Password"
                                     aria-describedby="helpId">
 
                             </div>
@@ -66,17 +66,14 @@
                     </div>
 
 
-
-
-
-
-
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-secondary" i><i class="bi bi-file-earmark-plus"></i> Nuevo</button>
                 <button type="button" class="btn btn-secondary"><i class="bi bi-x"></i> Cancelar</button>
-                <button type="button" id="guardar" class="btn btn-primary"><i class="bi bi-save-fill"></i>
-                    Guardar</button>
+              
+                <input id="guardar" class="btn btn-sm btn-success" type="submit" value="Guardar">
+
+
 
             </div>
             </form>
@@ -102,7 +99,7 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
     <script src="<?php echo RUTA_URL; ?>public/js/menu.js"></script>
-    <script src="<?php echo RUTA_URL; ?>public/js/modulos/pedido.js"></script>
+    <script src="<?php echo RUTA_URL; ?>public/js/modulos/Usuario.js"></script>
     <script type="text/javascript"
         src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/datatables.min.js">
     </script>
