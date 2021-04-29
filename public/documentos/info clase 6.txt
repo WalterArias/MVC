@@ -1,0 +1,20 @@
+AGENDA
+
+
+INSERCION MAESTRO DETALLE
+SUBIR IMAGEN
+ENVIAR EMAIL
+CREAR USUARIO 
+RETROALIMENTACION ARQUITECTURA MVC
+
+
+
+usado en email:
+
+con gmail, 
+php mail()
+sendmail  (miniservidor de correo electronico)
+configurar
+
+sendmail.
+php.

@@ -1,4 +1,5 @@
 <?php require RUTA_APP . '/views/inc/header.php';?>
+
 <div class="row">
     <div class="col-sm-12">
 

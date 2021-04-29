@@ -67,16 +67,16 @@ class Cliente extends Controlador
             } else {
                 $ext = explode(".", $_FILES["imagen"]["name"]);
                 if ($_FILES['imagen']['type'] == "image/jpg" || $_FILES['imagen']['type'] == "image/jpeg" || $_FILES['imagen']['type'] == "image/png") {
-
-                    $datos['imagen'] = round(microtime(true)) . '.' . end($ext);
-                    echo '<pre>';
-                    print_r($datos['imagen']);
-                    echo '</pre>';
+                     $datos['imagen'] = round(microtime(true)) . '.' . end($ext);
+                    // echo '<pre>';
+                    // print_r($datos['imagen']);
+                    // echo '</pre>';
+                    
                     move_uploaded_file($_FILES["imagen"]["tmp_name"], 'C:\xampp\htdocs\mvc\public\img\img_' . $datos['imagen']);
                 }
             }
             $datos = $this->clientemodelo->actualizarCliente($datos);
-            echo json_encode($datos);
+           echo json_encode($datos);
         }
     }
     public function eliminarCliente()

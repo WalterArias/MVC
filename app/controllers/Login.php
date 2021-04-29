@@ -6,12 +6,20 @@ class Login extends Controlador
     public function __construct()
     {
         $this->loginmodelo = $this->modelo('LoginModelo');
+        $this->articulomodelo=$this->modelo('ArticuloModelo');
     }
 
     public function index()
     {
         $this->vista('login/loginvista');
     }
+    
+    public function listarArticulos()
+    {
+        $datos = $this->articulomodelo->obtenerArticulos();
+        echo json_encode($datos);
+    }
+
 
     public function validarIngreso()
     {

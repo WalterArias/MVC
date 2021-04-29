@@ -3,7 +3,7 @@
 	class Home extends Controlador {
 		
 		public function __construct() {
-			
+			$this->articulomodelo = $this->modelo('ArticuloModelo');
 		}
 
 		public function index() {
@@ -14,4 +14,5 @@
 			$this->vista('home/index', $datos);
 		}
 
+	
 	}

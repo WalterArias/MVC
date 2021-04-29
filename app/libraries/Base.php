@@ -82,3 +82,5 @@
 		}
 		
 	}
+
+	//patron singleton

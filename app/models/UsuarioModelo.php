@@ -32,10 +32,13 @@ class UsuarioModelo
      
         // Ejecutamos la consulta
         if ($this->db->execute()) {            
-            $para = 'walarias@misena.edu.co';
+          /*  
+          otro ejemplo
+          
+           $para = 'walarias@misena.edu.co';
             $objeto = 'pruebas de email walter';
-            $mensaje = 'esto es una prueba , espero estes bien';
-            $headers  = 'From: walter.arias.aguirre@gmail.com'."\r\n".'Reply-To:walter.arias.aguirre@gmail.com'."\r\n".'X-Mailer: PHP/'.phpversion();
+            $mensaje = 'recupera tu clave en <a href= "www.facebook.com"><>';
+            $headers  = 'From: walter.arias.aguirre@gmail.com'."\r\n".'Reply-To:walter.arias.aguirre@gmail.com'."\r\n".'X-Mailer: PHP/'.phpversion(); */
              // mail($para,$objeto,$mensaje,$headers);
            mail($datos['email'],'Creacion de cuenta','Bienvenido al sistema TIENDA PEDRO',"'From: walter.arias.aguirre@gmail.com'.'Reply-To:walter.arias.aguirre@gmail.com'.'X-Mailer: PHP/'.phpversion()");
 
